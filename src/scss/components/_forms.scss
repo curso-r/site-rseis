@@ -2,8 +2,8 @@ input,
 textarea {
     width: 100%;
     margin-bottom: 16px;
-    background-color: color(typography, 2);
-    color: color(typography, 1i);
+    background-color: color(typography, 2) !important;
+    color: color(typography, 1i) !important;
     border-radius: 8px;
     border-width: 1px;
     border-style: solid;
@@ -40,6 +40,11 @@ textarea {
 
 input {
     height: 48px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 0s 600000s, color 0s 600000s;
 }
 
 .input {

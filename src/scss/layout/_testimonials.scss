@@ -11,6 +11,11 @@
     }
 }
 
+.person-name {
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
 .testimonials-shape {
 	position: absolute;
 }
@@ -84,14 +89,22 @@
 
 .testimonial-header {
 	position: absolute;
-	top: -80px;
+	top: -100px;
 
 	img {
-		width: 56px;
+		width: 86px;
 		height: auto;
 		border-radius: 50%;
 		@include shadow-sm;
 	}
+}
+
+.testimonial-body {
+	margin-bottom: 16px;
+}
+
+.testimonial-link i {
+	margin-right: 16px;
 }
 
 .testimonial-footer {
@@ -112,7 +125,7 @@
 		}
 
 	    .section-title {
-	        margin-bottom: 126px;
+	        margin-bottom: 48px;
 	    }
 	}
 

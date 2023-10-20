@@ -1126,8 +1126,8 @@ input,
 textarea {
   width: 100%;
   margin-bottom: 16px;
-  background-color: #222222;
-  color: #FFF;
+  background-color: #222222 !important;
+  color: #FFF !important;
   border-radius: 8px;
   border-width: 1px;
   border-style: solid;
@@ -1163,6 +1163,11 @@ textarea:focus {
 
 input {
   height: 48px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 0s 600000s, color 0s 600000s;
 }
 
 .input {
@@ -1454,7 +1459,7 @@ input {
   position: relative;
   height: 100%;
   background: #FFFFFF;
-  padding: 48px 24px 72px;
+  padding: 48px 24px 48px;
 }
 .feature-inner::before {
   content: "";
@@ -1532,6 +1537,11 @@ input {
   margin-bottom: 72px;
 }
 
+.person-name {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
 .testimonials-shape {
   position: absolute;
 }
@@ -1600,13 +1610,21 @@ input {
 
 .testimonial-header {
   position: absolute;
-  top: -80px;
+  top: -100px;
 }
 .testimonial-header img {
-  width: 56px;
+  width: 86px;
   height: auto;
   border-radius: 50%;
   box-shadow: 0 16px 24px rgba(0, 0, 0, 0.12);
+}
+
+.testimonial-body {
+  margin-bottom: 16px;
+}
+
+.testimonial-link i {
+  margin-right: 16px;
 }
 
 .testimonial-footer {
@@ -1623,7 +1641,7 @@ input {
     padding-bottom: 166px; /* 126+40px second column offset */
   }
   .testimonials .section-title {
-    margin-bottom: 126px;
+    margin-bottom: 48px;
   }
   .testimonials-wrap {
     margin-right: -24px;
@@ -1698,6 +1716,10 @@ input {
 /*--------------------------------------------------------------
 # Site content
 --------------------------------------------------------------*/
+html {
+  scroll-behavior: smooth;
+}
+
 .is-boxed {
   background: #EEF1FA;
 }
@@ -1719,6 +1741,11 @@ input {
 
 main {
   flex: 1 0 auto;
+}
+
+i {
+  color: black;
+  font-size: 22px;
 }
 
 .section-inner {
